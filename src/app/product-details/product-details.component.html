@@ -1,1 +1,8 @@
-<p>product-details works!</p>
+<div *ngIf="product">
+  <button routerLink="/test2">← Back to Products</button>
+
+  <div>
+    <h1>{{ product.title }}</h1>
+    <span>ID: {{ product.id }}</span>
+  </div>
+</div>
