@@ -1,41 +1,48 @@
-<div *ngIf="product">
-  <button routerLink="/test2">← Back to Products</button>
+<div class="product-details" *ngIf="product">
+  <button class="back-button" routerLink="/test2">← Back to Products</button>
 
-  <div>
+  <div class="product-header">
     <h1>{{ product.title }}</h1>
-    <span>ID: {{ product.id }}</span>
+    <span class="product-id">ID: {{ product.id }}</span>
   </div>
 
-  <div>
-    <div>
-      <div>
+  <div class="product-main">
+    <div class="product-images">
+      <div class="main-image">
         <img [src]="currentImage" [alt]="product.title" />
       </div>
-      <!-- thumbnail images in case there are multiple images -->
-      <div>
+      <div class="thumbnail-list">
         <img
           *ngFor="let img of product.images"
           [src]="img"
           [alt]="product.title"
+          (click)="currentImage = img"
+          [class.active]="currentImage === img"
         />
       </div>
     </div>
 
-    <div>
-      <div>
-        <h2>${{ product.price }}</h2>
-        <span> {{ product.stock }} in stock </span>
+    <div class="product-info">
+      <div class="price-stock">
+        <h2 class="price">${{ product.price }}</h2>
+        <span class="stock" [class.low-stock]="product.stock < 10">
+          {{ product.stock }} in stock
+        </span>
       </div>
 
       <div class="rating">
         <span class="stars">
-          <!-- if there is no review then show "No reviews, be the first to review." -->
-          <span class="empty-stars">★</span>
+          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+            <!-- If i < the floored rating, show a filled star; otherwise show empty star -->
+            <span *ngIf="i < Math.round(product.rating); else emptyStar"
+              >★</span
+            >
+            <ng-template #emptyStar>☆</ng-template>
+          </ng-container>
         </span>
-        <span class="rating-value">{{ product.rating }}/5</span>
       </div>
 
-      <p>{{ product.description }}</p>
+      <p class="description">{{ product.description }}</p>
 
       <div class="product-meta">
         <div class="meta-item">
@@ -59,13 +66,17 @@
       <div class="review-card" *ngFor="let review of product.reviews">
         <div class="review-header">
           <span class="reviewer-name">{{ review.reviewerName }}</span>
-          <span class="review-rating">
+          <div class="review-rating">
             <span class="stars">
-              <span class="filled-stars" [style.width.%]="review.rating * 5"
-                >★★★★★</span
-              >
+              <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+                <!-- If i < the floored rating, show a filled star; otherwise show empty star -->
+                <span *ngIf="i < Math.round(review.rating); else emptyStar"
+                  >★</span
+                >
+                <ng-template #emptyStar>☆</ng-template>
+              </ng-container>
             </span>
-          </span>
+          </div>
         </div>
         <p class="review-comment">{{ review.comment }}</p>
         <span class="review-date">{{ review.date | date }}</span>

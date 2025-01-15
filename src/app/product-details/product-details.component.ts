@@ -12,6 +12,7 @@ import { ActivatedRoute, RouterLink } from "@angular/router";
 export class ProductDetailsComponent implements OnInit {
   product: any;
   currentImage: string = "";
+  Math = Math;
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -20,6 +21,7 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
+      // initiate params to get the id from the route to get the product details
       const id = params["id"];
       this.http
         .get<any>(`https://dummyjson.com/products/${id}`)
