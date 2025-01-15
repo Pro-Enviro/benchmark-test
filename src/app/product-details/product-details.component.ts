@@ -24,6 +24,8 @@ export class ProductDetailsComponent implements OnInit {
       this.http
         .get<any>(`https://dummyjson.com/products/${id}`)
         .subscribe((data) => {
+          // console log to see the data and create markup accordingly
+          console.log(data);
           this.product = data;
           this.currentImage = data.images[0];
         });
