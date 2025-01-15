@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <!-- Brand on the left -->
+  <div class="navbar-brand">
+    <a routerLink="/">MariusTanase</a>
+  </div>
+
+  <!-- Hamburger on the right -->
+  <button class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Links on the right -->
+  <ul class="navbar-links" [class.open]="menuOpen">
+    <li><a (click)="closeMenu()" routerLink="/test1">Home</a></li>
+    <li><a (click)="closeMenu()" routerLink="/products">Products</a></li>
+    <li><a (click)="closeMenu()" routerLink="/challenges">Challenges</a></li>
+  </ul>
+</nav>
