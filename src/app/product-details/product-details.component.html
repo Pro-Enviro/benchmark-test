@@ -5,4 +5,71 @@
     <h1>{{ product.title }}</h1>
     <span>ID: {{ product.id }}</span>
   </div>
+
+  <div>
+    <div>
+      <div>
+        <img [src]="currentImage" [alt]="product.title" />
+      </div>
+      <!-- thumbnail images in case there are multiple images -->
+      <div>
+        <img
+          *ngFor="let img of product.images"
+          [src]="img"
+          [alt]="product.title"
+        />
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <h2>${{ product.price }}</h2>
+        <span> {{ product.stock }} in stock </span>
+      </div>
+
+      <div class="rating">
+        <span class="stars">
+          <!-- if there is no review then show "No reviews, be the first to review." -->
+          <span class="empty-stars">★</span>
+        </span>
+        <span class="rating-value">{{ product.rating }}/5</span>
+      </div>
+
+      <p>{{ product.description }}</p>
+
+      <div class="product-meta">
+        <div class="meta-item">
+          <strong>Category:</strong> {{ product.category }}
+        </div>
+        <div class="meta-item"><strong>Brand:</strong> {{ product.brand }}</div>
+        <div class="meta-item"><strong>SKU:</strong> {{ product.sku }}</div>
+      </div>
+
+      <div class="shipping-info">
+        <h3>Shipping Information</h3>
+        <p>{{ product.shippingInformation }}</p>
+        <p>{{ product.returnPolicy }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-section">
+    <h2>Customer Reviews</h2>
+    <div class="reviews-list">
+      <div class="review-card" *ngFor="let review of product.reviews">
+        <div class="review-header">
+          <span class="reviewer-name">{{ review.reviewerName }}</span>
+          <span class="review-rating">
+            <span class="stars">
+              <span class="filled-stars" [style.width.%]="review.rating * 5"
+                >★★★★★</span
+              >
+            </span>
+          </span>
+        </div>
+        <p class="review-comment">{{ review.comment }}</p>
+        <span class="review-date">{{ review.date | date }}</span>
+      </div>
+    </div>
+  </div>
 </div>
