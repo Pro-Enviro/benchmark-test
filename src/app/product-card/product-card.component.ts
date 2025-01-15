@@ -7,12 +7,8 @@ import { Product } from "../types/product.interface";
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="product-card">
+    <div>
       <h3>{{ product.title }}</h3>
-      <p><strong>ID:</strong> {{ product.id }}</p>
-      <p><strong>Description:</strong> {{ product.description }}</p>
-      <p><strong>Category:</strong> {{ product.category }}</p>
-      <p><strong>Stock:</strong> {{ product.stock }}</p>
     </div>
   `,
   styles: [
