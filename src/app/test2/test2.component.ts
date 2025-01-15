@@ -14,8 +14,13 @@ export class Test2Component {
   constructor(private readonly http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<any>("https://dummyjson.com/products").subscribe((data) => {
-      console.log(data);
+    this.http.get<any>("https://dummyjson.com/products").subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (error) => {
+        console.error(error.message);
+      },
     });
   }
 }
