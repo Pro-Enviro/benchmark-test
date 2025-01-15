@@ -1,37 +1,43 @@
 {
-  "hash": "9a9e093b",
-  "configHash": "a3154164",
+  "hash": "ba4003a2",
+  "configHash": "c7f9e15c",
   "lockfileHash": "d4ffe5d6",
-  "browserHash": "1b21b8b1",
+  "browserHash": "4db7cafb",
   "optimized": {
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "c60e36a3",
+      "fileHash": "156bb847",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "9f6aa1ce",
+      "fileHash": "1ed32619",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "4248cd37",
+      "fileHash": "b9a1f70e",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "a9ffaf6d",
+      "fileHash": "c714fe4b",
       "needsInterop": false
     },
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "e2b72ce8",
+      "fileHash": "b5377e2a",
+      "needsInterop": false
+    },
+    "primeng/button": {
+      "src": "../../../../../../node_modules/primeng/fesm2022/primeng-button.mjs",
+      "file": "primeng_button.js",
+      "fileHash": "b998bd1d",
       "needsInterop": false
     }
   },
