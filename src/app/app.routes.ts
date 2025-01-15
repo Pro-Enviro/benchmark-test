@@ -5,5 +5,5 @@ import { Test2Component } from "./test2/test2.component";
 export const routes: Routes = [
   { path: "test1", component: Test1Component },
   { path: "test2", component: Test2Component },
-  { path: "", redirectTo: "/test1", pathMatch: "full" },
+  { path: "", redirectTo: "/test2", pathMatch: "full" },
 ];

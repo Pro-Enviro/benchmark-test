@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-test2',
+  selector: "app-test2",
   imports: [],
-  templateUrl: './test2.component.html',
-  styleUrl: './test2.component.css'
+  templateUrl: "./test2.component.html",
+  styleUrl: "./test2.component.css",
 })
 export class Test2Component {
+  title = "Test 2";
+  intro: string = "This is the second test component";
 
+  constructor() {}
 }
