@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { Product } from "../types/product.interface";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-test2",
@@ -7,8 +9,13 @@ import { Component } from "@angular/core";
   styleUrl: "./test2.component.css",
 })
 export class Test2Component {
-  title = "Test 2";
-  intro: string = "This is the second test component";
+  products: Product[] = [];
 
-  constructor() {}
+  constructor(private readonly http: HttpClient) {}
+
+  ngOnInit() {
+    this.http.get<any>("https://dummyjson.com/products").subscribe((data) => {
+      console.log(data);
+    });
+  }
 }
