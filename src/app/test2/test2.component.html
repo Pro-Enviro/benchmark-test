@@ -8,6 +8,9 @@
 <em>Bonus if you can create a child component to display each product</em>
 
 <div class="products-container">
-  <app-product-card *ngFor="let product of products" [product]="product">
-  </app-product-card>
+  <h2>Products List</h2>
+  <div class="products-grid">
+    <app-product-card *ngFor="let product of products" [product]="product">
+    </app-product-card>
+  </div>
 </div>
