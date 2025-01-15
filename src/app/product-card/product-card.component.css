@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&display=swap");
 
 .product-card {
+  width: 350px;
+  min-height: 450px;
+  box-sizing: border-box;
+
   border: 1px solid hsl(0, 0%, 87%);
   padding: 15px;
   margin: 10px;
+
   border-radius: 8px;
   font-family: Lato, sans-serif;
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -16,7 +22,7 @@
 
 .product-image {
   width: 100%;
-  height: 200px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -27,7 +33,7 @@
 }
 
 .product-info {
-  padding: 15px;
+  padding: 1rem;
 }
 
 h3 {
