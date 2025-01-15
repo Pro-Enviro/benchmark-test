@@ -16,7 +16,7 @@ export class Test2Component {
   ngOnInit() {
     this.http.get<any>("https://dummyjson.com/products").subscribe({
       next: (data) => {
-        console.log(data);
+        this.products = data;
       },
       error: (error) => {
         console.error(error.message);
