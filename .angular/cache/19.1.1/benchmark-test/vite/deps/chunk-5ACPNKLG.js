@@ -1,7 +1,7 @@
 import {
   CommonModule,
   DOCUMENT
-} from "./chunk-73GH467D.js";
+} from "./chunk-UIDGAARB.js";
 import {
   Component,
   Directive,
@@ -30,7 +30,7 @@ import {
   ɵɵprojection,
   ɵɵprojectionDef,
   ɵɵsetNgModuleScope
-} from "./chunk-GVITISD5.js";
+} from "./chunk-FWUATNL2.js";
 import {
   __spreadValues
 } from "./chunk-WDMUDEB6.js";
@@ -2577,4 +2577,4 @@ export {
   PRIME_NG_CONFIG,
   providePrimeNG
 };
-//# sourceMappingURL=chunk-6OM5UTXX.js.map
+//# sourceMappingURL=chunk-5ACPNKLG.js.map
