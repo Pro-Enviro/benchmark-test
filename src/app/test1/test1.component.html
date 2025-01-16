@@ -1,1 +1,20 @@
-<p>{{intro}}</p>
+<p>{{ intro }}</p>
+<p>Want to see a funny meme?</p>
+<div class="card flex justify-center">
+  <p-button
+    (click)="showDialog()"
+    label="Yes!"
+    severity="help"
+    [raised]="true"
+    [rounded]="true"
+    class="center-button"
+  />
+  <p-dialog
+    header=""
+    [modal]="true"
+    [(visible)]="visible"
+    [style]="{ width: '25rem' }"
+  >
+    <img src="meme.png" alt="Meme" class="meme-img" />
+  </p-dialog>
+</div>
