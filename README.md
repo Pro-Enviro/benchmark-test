@@ -1,15 +1,14 @@
 # Instructions
 
-This is a quick test to establish a benchmark af your angular knowladge and skills. There is no time limmit but please make use of your own coding and style (no copy and paste)
+This is a quick test to establish a benchmark af your Angular knowledge and skills. There is no time limit but please make use of your own coding and style (no copy and paste)
 
-Be creative with the test (make it look nice) as this helps us to establush creativity and initiative.
+Be creative with the test (make it look nice) as this helps us to establish creativity and initiative.
 
 There are 3 tasks in total. The first can be found on app.component.ts
 
 Once completed please commit your changes to the repository for assessment. Please remember that you will have to create a fork and once completed (changes committed) you will need to do a pull request
 
 Asking questions WILL NOT count against you in any way
-
 
 REMEMBER: Enjoy it. Coding is fun!
 

@@ -1,0 +1,20 @@
+<nav class="navbar flex w-full h-12 bg-zinc-50 border-b-2 border-zinc-100 fixed top-0 left-0 right-0 bg-opacity-95">
+  <ul class="flex h-full w-full items-center gap-x-4 max-w-5xl mx-auto px-4 lg:px-6">
+    <li><a routerLink="/" 
+           routerLinkActive
+           [routerLinkActiveOptions]="{exact: true}"
+           #rlaHome="routerLinkActive"
+           [class]="rlaHome.isActive ? 'text-black' : 'text-zinc-500'"
+           class="hover:text-black transition-colors duration-300">Home</a></li>
+    <li><a routerLink="/test-1"
+           routerLinkActive
+           #rlaTest1="routerLinkActive"
+           [class]="rlaTest1.isActive ? 'text-black' : 'text-zinc-500'"
+           class="hover:text-black transition-colors duration-300">Test 1</a></li>
+    <li><a routerLink="/test-2"
+           routerLinkActive
+           #rlaTest2="routerLinkActive"
+           [class]="rlaTest2.isActive ? 'text-black' : 'text-zinc-500'"
+           class="hover:text-black transition-colors duration-300">Test 2</a></li>
+  </ul>
+</nav>
