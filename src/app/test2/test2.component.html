@@ -1,4 +1,25 @@
-<p>Use the component to do a fetch request using 'https://dummyjson.com/products' and display the results here. Use some markup and styles to make it presentable.</p>
+<!-- <p>
+  Use the component to do a fetch request using 'https://dummyjson.com/products'
+  and display the results here. Use some markup and styles to make it
+  presentable.
+</p>
 <p>Required fields are: ID, Title, Description, Category and Stock #</p>
 <em>Add all required modules for doing a REST API get request</em>
-<em>Bonus if you can create a child component to display each product</em>
+<em>Bonus if you can create a child component to display each product</em> -->
+<div class="test2-wrap">
+  <div *ngIf="isLoading">Products Loading ....</div>
+  <div *ngIf="!isLoading">
+    <div *ngFor="let product of products">
+      <img
+        src="{{ product.images[0] }}"
+        alt="{{ product.title }}"
+        width="200px"
+      />
+      <h2>{{ product.title }}</h2>
+      <h3>ID:{{ product.id }}</h3>
+      <p>{{ product.description }}</p>
+      <p><strong>Category:</strong> {{ product.category }}</p>
+      <p><strong>Stock:</strong> {{ product.stock }}</p>
+    </div>
+  </div>
+</div>

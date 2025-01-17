@@ -1,13 +1,13 @@
 import {
+  ButtonModule
+} from "./chunk-YQTVM77G.js";
+import {
   animate,
   state,
   style,
   transition,
   trigger
 } from "./chunk-FIASRFFX.js";
-import {
-  ButtonModule
-} from "./chunk-YQTVM77G.js";
 import {
   BaseComponent,
   MinusIcon,

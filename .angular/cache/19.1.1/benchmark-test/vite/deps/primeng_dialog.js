@@ -1,4 +1,7 @@
 import {
+  Button
+} from "./chunk-YQTVM77G.js";
+import {
   animate,
   animation,
   style,
@@ -6,9 +9,6 @@ import {
   trigger,
   useAnimation
 } from "./chunk-FIASRFFX.js";
-import {
-  Button
-} from "./chunk-YQTVM77G.js";
 import {
   BaseComponent,
   DomHandler,

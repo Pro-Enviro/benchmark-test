@@ -35,12 +35,13 @@
     <ul class="menu-list" [ngStyle]="{ opacity: isMenuOpen ? '1' : '0' }">
       <li (click)="hideTasks()">Home</li>
       <li (click)="showTask1()">Test 1</li>
-      <li>Test 2</li>
+      <li (click)="showTask2()">Test 2</li>
     </ul>
   </div>
   <h2 class="title" [ngStyle]="{ display: isHomeComponent ? 'block' : 'none' }">
     Hi there! Welcome to Iryna's test.
   </h2>
   <app-test1 *ngIf="isTask1Visible"></app-test1>
+  <app-test2 *ngIf="isTask2Visible"></app-test2>
 </div>
 <router-outlet />
