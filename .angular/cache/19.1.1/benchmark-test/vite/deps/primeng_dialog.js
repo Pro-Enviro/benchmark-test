@@ -1,7 +1,4 @@
 import {
-  Button
-} from "./chunk-YQTVM77G.js";
-import {
   animate,
   animation,
   style,
@@ -10,12 +7,17 @@ import {
   useAnimation
 } from "./chunk-FIASRFFX.js";
 import {
-  BaseComponent,
+  Button
+} from "./chunk-CSSBR5MZ.js";
+import {
   DomHandler,
   TimesIcon,
   WindowMaximizeIcon,
   WindowMinimizeIcon
-} from "./chunk-LCY2L7RM.js";
+} from "./chunk-WUBNOLHI.js";
+import {
+  BaseComponent
+} from "./chunk-H3OYF2EN.js";
 import {
   BaseStyle,
   PrimeTemplate,
@@ -36,7 +38,7 @@ import {
   setAttribute,
   unblockBodyScroll,
   uuid
-} from "./chunk-5ACPNKLG.js";
+} from "./chunk-VNPDTBGU.js";
 import {
   CommonModule,
   DOCUMENT,

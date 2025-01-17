@@ -2563,8 +2563,11 @@ export {
   setAttribute,
   isEmpty,
   isNotEmpty,
+  equals,
   getKeyValue,
   uuid,
+  Header,
+  Footer,
   PrimeTemplate,
   SharedModule,
   TranslationKeys,
@@ -2577,4 +2580,4 @@ export {
   PRIME_NG_CONFIG,
   providePrimeNG
 };
-//# sourceMappingURL=chunk-5ACPNKLG.js.map
+//# sourceMappingURL=chunk-VNPDTBGU.js.map

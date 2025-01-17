@@ -1,8 +1,10 @@
 import {
   AutoFocus,
-  BaseComponent,
   SpinnerIcon
-} from "./chunk-LCY2L7RM.js";
+} from "./chunk-WUBNOLHI.js";
+import {
+  BaseComponent
+} from "./chunk-H3OYF2EN.js";
 import {
   BaseStyle,
   PrimeTemplate,
@@ -20,7 +22,7 @@ import {
   remove,
   removeClass,
   uuid
-} from "./chunk-5ACPNKLG.js";
+} from "./chunk-VNPDTBGU.js";
 import {
   CommonModule,
   NgClass,
@@ -2716,4 +2718,4 @@ export {
   Button,
   ButtonModule
 };
-//# sourceMappingURL=chunk-YQTVM77G.js.map
+//# sourceMappingURL=chunk-CSSBR5MZ.js.map
