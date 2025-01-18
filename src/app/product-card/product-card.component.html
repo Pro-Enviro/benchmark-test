@@ -1,4 +1,5 @@
 <p-card
+  *ngIf="product"
   [style]="{ width: '100%', overflow: 'hidden' }"
   styleClass="relative border-2 h-full"
 >
@@ -11,8 +12,10 @@
   </ng-template>
   <ng-template #title> {{ product.title }}</ng-template>
 
-  <ng-template #subtitle> product id:{{ product.id }}</ng-template>
-  <h3>Category:{{ product.category }}</h3>
+  <ng-template #subtitle> product id: {{ product.id }}</ng-template>
+  <h3 class="mb-2">
+    <span class="font-bold">Category:</span> {{ product.category }}
+  </h3>
   <p>
     {{ product.description }}
   </p>
@@ -27,7 +30,7 @@
   />
 
   <ng-template #footer>
-    <div class="flex mt-1 justify-center">
+    <div class="flex justify-center mt-auto flex-end">
       <p-button label="Add to cart" class="w-full" styleClass="w-full" />
     </div>
   </ng-template>

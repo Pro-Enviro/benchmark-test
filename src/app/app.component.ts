@@ -25,14 +25,14 @@ export class AppComponent {
   }
 
   showTask1(): void {
-    this.isTask1Visible = !this.isTask1Visible;
+    this.isTask1Visible = true;
     this.isTask2Visible = false;
     this.isMenuOpen = !this.isMenuOpen;
     this.isHomeComponent = false;
   }
 
   showTask2(): void {
-    this.isTask2Visible = !this.isTask2Visible;
+    this.isTask2Visible = true;
     this.isTask1Visible = false;
     this.isMenuOpen = !this.isMenuOpen;
     this.isHomeComponent = false;
