@@ -10,4 +10,5 @@ export interface ProductType {
   rating?: number;
   reviews?: any[];
   tags?: string[];
+  discountPercentage?: number;
 }
