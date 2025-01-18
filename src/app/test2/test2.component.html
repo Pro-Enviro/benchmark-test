@@ -13,8 +13,39 @@
     *ngIf="!isLoading"
     class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full mx-auto gap-4"
   >
-    <li *ngFor="let product of products" class="">
+    <li
+      *ngFor="let product of products"
+      class="cursor-pointer"
+      (click)="showProductFullDescription(product)"
+    >
       <app-product-card [product]="product" class="h-full"></app-product-card>
     </li>
   </ul>
+</div>
+
+<div class="card flex justify-center" *ngIf="clickedProduct">
+  <p-dialog
+    header="{{ clickedProduct.title }}"
+    [modal]="true"
+    [(visible)]="visible4"
+    [style]="{ width: '40rem' }"
+  >
+    <img
+      alt="{{ clickedProduct.title }}"
+      class="w-full h-[300px] object-contain"
+      src="{{ clickedProduct.images[0] }}"
+    />
+
+    <p>{{ clickedProduct.brand }}</p>
+    <p>{{ clickedProduct.id }}</p>
+    <p>{{ clickedProduct.price }}</p>
+    <p>{{ clickedProduct.rating }}</p>
+    <!-- discountPercentage: 7.1 -->
+    <h3 class="mb-2">
+      <span class="font-bold">Category:</span> {{ clickedProduct.category }}
+    </h3>
+    <p>
+      {{ clickedProduct.description }}
+    </p>
+  </p-dialog>
 </div>
