@@ -1,0 +1,37 @@
+<p-card
+  *ngIf="product"
+  [style]="{ width: '100%', overflow: 'hidden' }"
+  styleClass="relative border-2 h-full"
+>
+  <ng-template #header>
+    <img
+      alt="{{ product.title }}"
+      class="w-full h-[300px] object-contain"
+      src="{{ product.images[0] }}"
+    />
+  </ng-template>
+  <ng-template #title> {{ product.title }}</ng-template>
+
+  <ng-template #subtitle> product id: {{ product.id }}</ng-template>
+  <h3 class="mb-2">
+    <span class="font-bold">Category:</span> {{ product.category }}
+  </h3>
+  <p>
+    {{ product.description }}
+  </p>
+
+  <p-tag
+    [value]="getStockLabel(product)"
+    [severity]="getSeverity(product)"
+    class="absolute"
+    styleClass="dark:!bg-surface-900"
+    [style.left.px]="4"
+    [style.top.px]="4"
+  />
+
+  <ng-template #footer>
+    <div class="flex justify-center mt-auto flex-end">
+      <p-button label="Add to cart" class="w-full" styleClass="w-full" />
+    </div>
+  </ng-template>
+</p-card>

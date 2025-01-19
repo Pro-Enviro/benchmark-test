@@ -1,1 +1,80 @@
-<p>{{intro}}</p>
+<div class="fieldset-wrap">
+  <div class="card flex justify-center">
+    <p-fieldset legend="Want to see a funny meme?" class="w-full">
+      <p-button
+        (click)="showDialog()"
+        label="Yes!"
+        severity="help"
+        [raised]="true"
+        [rounded]="true"
+        class="center-button"
+      />
+    </p-fieldset>
+  </div>
+</div>
+
+<div class="card flex justify-center">
+  <p-dialog
+    header=""
+    [modal]="true"
+    [(visible)]="visible"
+    [style]="{ width: '25rem' }"
+    (onHide)="showNextDialog()"
+  >
+    <img src="meme.png" alt="Meme" class="meme-img" />
+  </p-dialog>
+</div>
+
+<div class="card flex justify-center">
+  <p-dialog
+    header="How do you like this meme?"
+    [modal]="true"
+    [(visible)]="visible2"
+    [style]="{ width: '25rem' }"
+  >
+    <div class="card flex justify-center mb-4">
+      <p-rating [(ngModel)]="value" stars="5">
+        <ng-template #cancelicon>
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/cancel.png"
+            height="24"
+            width="24"
+          />
+        </ng-template>
+        <ng-template #onicon>
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon-active.png"
+            height="24"
+            width="24"
+          />
+        </ng-template>
+        <ng-template #officon>
+          <img
+            src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon.png"
+            height="24"
+            width="24"
+          />
+        </ng-template>
+      </p-rating>
+    </div>
+    <p-button
+      (click)="showResponse()"
+      label="Submit"
+      severity="help"
+      [raised]="true"
+      [rounded]="true"
+      class="center-button"
+    />
+  </p-dialog>
+</div>
+
+<div class="card flex justify-center">
+  <p-dialog
+    header="{{ responseText }}"
+    [modal]="true"
+    [(visible)]="visible3"
+    [style]="{ width: '25rem' }"
+    (onHide)="resetRating()"
+  >
+  </p-dialog>
+</div>

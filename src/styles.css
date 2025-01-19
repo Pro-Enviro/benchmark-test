@@ -1,1 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-wrap {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.menu-btn {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: #10b981;
+  margin: 0 auto;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px -1px rgba(80, 141, 78, 0.6);
+  border: none;
+  padding: 5px 0 5px 0;
+}
+
+.menu-list {
+  position: absolute;
+  bottom: 0;
+  top: 35px;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 1s;
+  background-color: #10b981;
+  width: 200px;
+  height: 84px;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.menu-list li {
+  width: 100%;
+  text-align: center;
+  padding: 2px;
+  color: #fff;
+}
+.menu-list li:hover {
+  background-color: #12d091;
+  transition: background-color 1s;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  background-color: #0ea271;
+  transition: background-color 1s;
+}
+
+.title {
+  margin-top: 70px;
+  text-align: center;
+  font-weight: 700;
+  @apply xl:text-2xl;
+}
+
+.p-card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.p-card-body > :nth-child(3) {
+  margin-bottom: auto;
+}

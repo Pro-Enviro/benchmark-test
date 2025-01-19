@@ -1,0 +1,12 @@
+.meme-img {
+  width: 100%;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+}
+
+.fieldset-wrap {
+  margin-top: 70px;
+}
