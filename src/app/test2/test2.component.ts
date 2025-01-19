@@ -49,13 +49,10 @@ export class Test2Component {
   showProductFullDescription(product: ProductType): void {
     this.visible4 = true;
     this.clickedProduct = product;
-    this.value = product.rating ? Math.round(product.rating) : 0;
-    this.discountPrice =
-      product?.price && product?.discountPercentage
-        ? Number(
-            (product.price * (1 - product.discountPercentage / 100)).toFixed(2)
-          )
-        : 0;
+    this.value = Math.round(product.rating);
+    this.discountPrice = Number(
+      (product.price * (1 - product.discountPercentage / 100)).toFixed(2)
+    );
   }
 
   dataFormatting(date: string): string {
